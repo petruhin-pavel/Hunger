@@ -1,0 +1,153 @@
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.container{
+  max-width: 1280px;
+  margin: 0 auto;
+  &-header{
+    position: relative;
+  }
+}
+
+// header ===================
+.logo{
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header{
+  background: url(/img/header-bg.png);
+  text-align: center;
+  &-nav{
+    height: 100px;
+    display: flex;
+  }
+  &__title{
+    font-size: 96px;
+    text-align: center;
+  }
+  &__subtitle{
+    text-align: center;
+    margin-top: 226px;
+  }
+}
+.nav-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  list-style: none;
+  padding-left: 0;
+  &__left{
+    margin-right: 110px;
+  }
+  &__right{
+    margin-left: 110px;
+  }
+}
+.nav-link{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Open Sans;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+}
+.title{
+  font-family: 'Mrs Sheppards', cursive;
+  text-transform: uppercase;
+  &::after{
+    content: '';
+    display: block;
+    margin: 30px auto;
+    width: 60px;
+    height: 6px;
+    border-radius: 50px;
+    background: #E8C300;
+  }
+}
+.subtitle{
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+.button{
+  display: inline-block;
+  height: 60px;
+  min-width: 200px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 20px;
+  box-sizing: border-box;
+  margin: 0 20px;
+}
+// ============================
+@media(max-width: 1300px){
+  .header-nav{
+    margin: 0 30px;
+  }
+}
+@media(max-width: 768px){
+  .logo{
+    position: static;
+    margin: 25px 0 0 0;
+    transform: translateX(0%);
+    height: 90px;
+  }
+  .header-nav{
+    height: 60px;
+  }
+  .nav-list{
+    margin: 0;
+    &__left{
+      margin-right: 4%;
+    }
+    &__right{
+      margin-left: 4%;
+    }
+  }
+  .header{
+    &__subtitle{
+    margin-top: 113px;
+    }
+  }
+  
+}
+
+@media(max-width: 640px){
+  .header-nav{
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-list{
+    width: 100%;
+    margin-bottom: 10px;
+    &__left{
+      margin-right: 0;
+    }
+    &__right{
+      margin-left: 0;
+    }
+  }
+}
+@media(max-width: 484px){
+  .header{
+    &__title{
+      font-size: 60px;
+    }
+    &__button{
+      margin: 10px 0;
+    }
+  }
+}
