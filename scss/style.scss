@@ -12,7 +12,6 @@ body{
     position: relative;
   }
 }
-
 // header ===================
 .logo{
   position: absolute;
@@ -21,8 +20,9 @@ body{
   transform: translateX(-50%);
 }
 .header{
-  background: url(/img/header-bg.png);
+  background: url(/img/header-bg.png) top / cover no-repeat;
   text-align: center;
+  min-height: 800px;
   &-nav{
     height: 100px;
     display: flex;
@@ -34,6 +34,20 @@ body{
   &__subtitle{
     text-align: center;
     margin-top: 226px;
+  }
+  &__social{
+    position: absolute;
+    right: 0;
+    top: 340px;
+  }
+  &__timetable{
+    position: absolute;
+    left: -115px;
+    top: 430px;
+    transform: rotate(-90deg);
+  }
+  &__arrow{
+    margin: 93px auto;
   }
 }
 .nav-list{
@@ -58,6 +72,10 @@ body{
   font-size: 12px;
   line-height: 18px;
   color: #FFFFFF;
+  transition: 0.3s;
+  &:hover{
+    color: #E8C300;
+  }
 }
 .title{
   font-family: 'Mrs Sheppards', cursive;
@@ -91,14 +109,93 @@ body{
   padding-top: 20px;
   box-sizing: border-box;
   margin: 0 20px;
+  transition: 0.3s;
+  &:hover{
+    background: #E8C300;
+  }
+}
+.social{
+  
+  &-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 10px 0;
+    transition: 0.3s;
+    &:hover{
+      background: #E8C300;
+    }
+  }
+}
+.timetable{
+  font-size: 12px;
+  line-height: 12px;
+}
+.arrow-down{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    transition: 0.3s;
+    &:hover{
+      background: #E8C300;
+    }
+  }
 }
 // ============================
 @media(max-width: 1300px){
+  .header{
+    &__social{
+      right: 30px;
+    }
+    &__timetable{
+      left: -85px;
+    }
+  }
   .header-nav{
     margin: 0 30px;
   }
 }
+@media(max-width: 1070px){
+  .header{
+    min-height: 1050px;
+    &__social{
+      position: static;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__timetable{
+      position: static;
+      transform: rotate(0deg);
+    }
+  }
+  .social-link{
+    margin: 40px 10px;
+  }
+}
 @media(max-width: 768px){
+  .header{
+    min-height: 1050px;
+    &__subtitle{
+    margin-top: 113px;
+    }
+  }
   .logo{
     position: static;
     margin: 25px 0 0 0;
@@ -117,15 +214,16 @@ body{
       margin-left: 4%;
     }
   }
-  .header{
-    &__subtitle{
-    margin-top: 113px;
-    }
-  }
+  
   
 }
-
 @media(max-width: 640px){
+  .header{
+    min-height: 900px;
+    &__arrow{
+    display: none;
+  }
+  }
   .header-nav{
     flex-direction: column;
     align-items: center;
