@@ -176,12 +176,15 @@ body{
     display: flex;
   }
   &-item{
-    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: 50%;
     min-height: 675px;
     position: relative;
   }
   &-img{
-    margin: 100px auto;
     width: 90%;
   }
   &__title{
@@ -189,16 +192,18 @@ body{
     font-size: 36px;
     line-height: 48px;
     text-align: center;
-    margin-top: 217px;
+    &::after{
+      margin: 15px auto;
+    }
   }
   &__text{
     max-width: 600px;
     color: #000000;
     text-align: center;
-    margin: auto;
   }
   &__frame{
     position: absolute;
+    right: 0;
   }
 }
 
@@ -216,8 +221,23 @@ body{
   .header-nav{
     margin: 0 30px;
   }
+  .about{
+    &-item{
+      &__left{
+        margin-left: 10px;
+      }
+      &__right{
+        margin-right: 10px;
+      }
+    }
+  }
 }
 @media(max-width: 1070px){
+  .frame{
+    width: 200px;
+    height: 200px;
+    border: 15px solid #E8C300;
+  }
   .header{
     min-height: 1050px;
     &__social{
@@ -236,6 +256,11 @@ body{
   }
 }
 @media(max-width: 768px){
+  .frame{
+    width: 250px;
+    height: 250px;
+    border: 20px solid #E8C300;
+  }
   .header{
     min-height: 1050px;
     &__subtitle{
@@ -260,7 +285,16 @@ body{
       margin-left: 4%;
     }
   }
-  
+  .about{
+    &-block{
+      flex-direction: column;
+    }
+    &-item{
+      flex-basis: 100%;
+      min-height: 400px;
+      margin: 0 15px;
+    }
+  }
   
 }
 @media(max-width: 640px){
@@ -286,6 +320,11 @@ body{
   }
 }
 @media(max-width: 484px){
+  .frame{
+    width: 200px;
+    height: 200px;
+    border: 15px solid #E8C300;
+  }
   .header{
     &__title{
       font-size: 60px;
@@ -293,5 +332,12 @@ body{
     &__button{
       margin: 10px 0;
     }
+  }
+}
+@media(max-width: 320px){
+  .frame{
+    width: 150px;
+    height: 150px;
+    border: 10px solid #E8C300;
   }
 }

@@ -235,13 +235,26 @@ body {
 }
 
 .about-item {
-  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
   min-height: 675px;
   position: relative;
 }
 
 .about-img {
-  margin: 100px auto;
   width: 90%;
 }
 
@@ -250,18 +263,21 @@ body {
   font-size: 36px;
   line-height: 48px;
   text-align: center;
-  margin-top: 217px;
+}
+
+.about__title::after {
+  margin: 15px auto;
 }
 
 .about__text {
   max-width: 600px;
   color: #000000;
   text-align: center;
-  margin: auto;
 }
 
 .about__frame {
   position: absolute;
+  right: 0;
 }
 
 @media (max-width: 1300px) {
@@ -274,9 +290,20 @@ body {
   .header-nav {
     margin: 0 30px;
   }
+  .about-item__left {
+    margin-left: 10px;
+  }
+  .about-item__right {
+    margin-right: 10px;
+  }
 }
 
 @media (max-width: 1070px) {
+  .frame {
+    width: 200px;
+    height: 200px;
+    border: 15px solid #E8C300;
+  }
   .header {
     min-height: 1050px;
   }
@@ -303,6 +330,11 @@ body {
 }
 
 @media (max-width: 768px) {
+  .frame {
+    width: 250px;
+    height: 250px;
+    border: 20px solid #E8C300;
+  }
   .header {
     min-height: 1050px;
   }
@@ -327,6 +359,18 @@ body {
   }
   .nav-list__right {
     margin-left: 4%;
+  }
+  .about-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    min-height: 400px;
+    margin: 0 15px;
   }
 }
 
@@ -359,10 +403,23 @@ body {
 }
 
 @media (max-width: 484px) {
+  .frame {
+    width: 200px;
+    height: 200px;
+    border: 15px solid #E8C300;
+  }
   .header__title {
     font-size: 60px;
   }
   .header__button {
     margin: 10px 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .frame {
+    width: 150px;
+    height: 150px;
+    border: 10px solid #E8C300;
   }
 }
