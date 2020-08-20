@@ -4,7 +4,6 @@ body{
   color: #FFFFFF;
   margin: 0;
 }
-
 .container{
   max-width: 1280px;
   margin: 0 auto;
@@ -12,74 +11,11 @@ body{
     position: relative;
   }
 }
-// header ===================
-.logo{
-  position: absolute;
-  top: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.header{
-  background: url(/img/header-bg.png) top / cover no-repeat;
-  text-align: center;
-  min-height: 800px;
-  &-nav{
-    height: 100px;
-    display: flex;
-  }
-  &__title{
-    font-size: 96px;
-    text-align: center;
-  }
-  &__subtitle{
-    text-align: center;
-    margin-top: 226px;
-  }
-  &__social{
-    position: absolute;
-    right: 0;
-    top: 340px;
-  }
-  &__timetable{
-    position: absolute;
-    left: -115px;
-    top: 430px;
-    transform: rotate(-90deg);
-  }
-  &__arrow{
-    margin: 93px auto;
-  }
-}
-.nav-list{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 50%;
-  list-style: none;
-  padding-left: 0;
-  &__left{
-    margin-right: 110px;
-  }
-  &__right{
-    margin-left: 110px;
-  }
-}
-.nav-link{
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: Open Sans;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 18px;
-  color: #FFFFFF;
-  transition: 0.3s;
-  &:hover{
-    color: #E8C300;
-  }
-}
+// elements ===================
 .title{
-  font-family: 'Mrs Sheppards', cursive;
+  font-family: 'Italiana', serif;
   text-transform: uppercase;
+  margin: 0;
   &::after{
     content: '';
     display: block;
@@ -96,6 +32,11 @@ body{
   line-height: 14px;
   text-transform: uppercase;
   letter-spacing: 0.5em;
+}
+.text{
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 400;
 }
 .button{
   display: inline-block;
@@ -157,6 +98,111 @@ body{
     }
   }
 }
+.frame{
+  width: 250px;
+  height: 250px;
+  border: 20px solid #E8C300;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+// header ===================
+.logo{
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header{
+  background: url(/img/header-bg.png) top / cover no-repeat;
+  text-align: center;
+  min-height: 800px;
+  &-nav{
+    height: 100px;
+    display: flex;
+  }
+  &__title{
+    font-size: 96px;
+    text-align: center;
+  }
+  &__subtitle{
+    text-align: center;
+    margin-top: 226px;
+  }
+  &__social{
+    position: absolute;
+    right: 0;
+    top: 340px;
+  }
+  &__timetable{
+    position: absolute;
+    left: -115px;
+    top: 430px;
+    transform: rotate(-90deg);
+  }
+  &__arrow{
+    margin: 93px auto;
+  }
+}
+// nav ===================
+.nav-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  list-style: none;
+  padding-left: 0;
+  &__left{
+    margin-right: 110px;
+  }
+  &__right{
+    margin-left: 110px;
+  }
+}
+.nav-link{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Open Sans;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+  transition: 0.3s;
+  &:hover{
+    color: #E8C300;
+  }
+}
+.about{
+  &-block{
+    display: flex;
+  }
+  &-item{
+    width: 50%;
+    min-height: 675px;
+    position: relative;
+  }
+  &-img{
+    margin: 100px auto;
+    width: 90%;
+  }
+  &__title{
+    color: #000000;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    margin-top: 217px;
+  }
+  &__text{
+    max-width: 600px;
+    color: #000000;
+    text-align: center;
+    margin: auto;
+  }
+  &__frame{
+    position: absolute;
+  }
+}
+
+
 // ============================
 @media(max-width: 1300px){
   .header{
