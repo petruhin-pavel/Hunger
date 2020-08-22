@@ -171,6 +171,7 @@ body{
     color: #E8C300;
   }
 }
+// about us ===================
 .about{
   &-block{
     display: flex;
@@ -205,6 +206,10 @@ body{
     position: absolute;
     right: 0;
   }
+}
+// chef ===================
+.chef{
+  background: url(../img/specialtybg.png) top / cover no-repeat;
 }
 
 

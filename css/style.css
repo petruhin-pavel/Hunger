@@ -280,6 +280,10 @@ body {
   right: 0;
 }
 
+.chef {
+  background: url(../img/specialtybg.png) top/cover no-repeat;
+}
+
 @media (max-width: 1300px) {
   .header__social {
     right: 30px;
