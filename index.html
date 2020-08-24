@@ -7,13 +7,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Open+Sans:wght@400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <title>HUNGER</title>
+  <title>Hungry People | restaurant</title>
 </head>
 
 <body>
   <header class="header">
-    <div class="container container-header">
-      <img src="img/logo.svg" alt="logo" class="logo">
+    <div class="burger-nav">
+      <span></span>
+    </div>
+    <nav class="mobile-nav">
+      <ul class="mobile-nav-list">
+        <li class="nav-item mobile-nav-item"><a href="#" class="nav-link mobile-nav-link">HOME</a></li>
+        <li class="nav-item mobile-nav-item"><a href="#" class="nav-link mobile-nav-link">ABOUT</a></li>
+        <li class="nav-item mobile-nav-item"><a href="#" class="nav-link mobile-nav-link">TEAM</a></li>
+        <li class="nav-item mobile-nav-item"><a href="#" class="nav-link mobile-nav-link">BOOKING</a></li>
+        <li class="nav-item mobile-nav-item"><a href="#" class="nav-link mobile-nav-link">MENU</a></li>
+        <li class="nav-item mobile-nav-item"><a href="#" class="nav-link mobile-nav-link">GALERIE</a></li>
+        <li class="nav-item mobile-nav-item"><a href="#" class="nav-link mobile-nav-link">EVENTS</a></li>
+        <li class="nav-item mobile-nav-item"><a href="#" class="nav-link mobile-nav-link">CONTACT</a></li>
+      </ul>
+    </nav><!-- mobile-nav -->
+    <div class="container">
+      <img src="img/logo.svg" alt="HUNGER LOGO" class="logo">
       <nav class="header-nav">
         <ul class="nav-list nav-list__left">
           <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
@@ -77,15 +92,18 @@
       </div><!-- about-block -->
     </div><!-- container -->
   </section><!-- about -->
+
+
+
   <section class="chef">
     <div class="container">
-      <div class="content-wrap">
+      <div class="content">
         <div class="content-box">
-          <div class="frame"></div>
-          <img src="img/Rectangle.png" alt="MASTER CHEF" class="content-image">
+          <div class="frame content__frame"></div>
+          <img src="img/Rectangle.png" alt="MASTER CHEF" class="about-img">
         </div><!-- content-box -->
         <div class="content-box">
-          <h2 class="title ">MASTER CHEF</h2>
+          <h2 class="title content__title">MASTER CHEF</h2>
           <p class="text">
             <strong>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor
@@ -102,9 +120,11 @@
         </div><!-- content-box -->
       </div>
     </div><!-- container -->
-  </section><!-- content -->
+  </section><!-- chef -->
 
 
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
