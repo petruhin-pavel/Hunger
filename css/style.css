@@ -22,6 +22,10 @@ body {
   margin: 0;
 }
 
+.title-dark {
+  color: #000000;
+}
+
 .title::after {
   content: '';
   display: block;
@@ -46,6 +50,14 @@ body {
   font-weight: 400;
 }
 
+.text strong {
+  font-size: 18px;
+}
+
+.text-dark {
+  color: #000000;
+}
+
 .button {
   display: inline-block;
   height: 60px;
@@ -55,7 +67,7 @@ body {
   text-decoration: none;
   color: #FFFFFF;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 18px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0 20px;
@@ -140,6 +152,11 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 5px;
+}
+
+.frame-left {
+  position: absolute;
+  left: 0;
 }
 
 .logo {
@@ -385,10 +402,75 @@ body {
   background: url(../img/specialtybg.png) top/cover no-repeat;
 }
 
+.table__button {
+  /* width: 100%; */
+  -ms-flex-preferred-size: 98%;
+      flex-basis: 98%;
+  background: #E8C300;
+  padding: 0;
+  border: none;
+  margin: 5px;
+}
+
+.contacts-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 0;
+}
+
+.input {
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  /* width: 277px; */
+  /* width: 100%; */
+  height: 60px;
+  border-radius: 5px;
+  background-color: #E5E5E5;
+  margin: 5px;
+  padding: 0 0 0 20px;
+  font-size: 14px;
+  line-height: 19px;
+}
+
 .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.content-img-wrap {
+  display: inline-block;
+  position: relative;
+  width: 530px;
+  height: 530px;
+  border: 1px solid red;
+}
+
+.content-img {
+  width: 100%;
+  height: 100%;
+}
+
+.content-frame {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 93%;
+  height: 100%;
+}
+
+.content-frame__left {
+  left: -35%;
 }
 
 .content-box {
@@ -410,23 +492,35 @@ body {
   text-align: center;
 }
 
-.content__frame {
-  position: absolute;
-  left: 0;
-}
-
-.content__title {
-  color: #ffffff;
-  font-size: 36px;
-  line-height: 48px;
-  text-align: center;
+.content-box__end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .content__title::after {
   margin: 15px auto;
 }
 
+@media (max-width: 1280px) {
+  .content-img-wrap {
+    width: 430px;
+    height: 430px;
+  }
+}
+
+@media (max-width: 1120px) {
+  .input {
+    -ms-flex-preferred-size: 98%;
+        flex-basis: 98%;
+  }
+}
+
 @media (max-width: 1070px) {
+  .content-img-wrap {
+    width: 370px;
+    height: 370px;
+  }
   .header {
     /* min-height: 1050px; */
   }
@@ -458,6 +552,15 @@ body {
 }
 
 @media (max-width: 900px) {
+  .content-img-wrap {
+    width: 430px;
+    height: 430px;
+  }
+  .content-box__end {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .burger-nav {
     display: block;
   }
@@ -474,11 +577,6 @@ body {
   .header-nav {
     display: none;
   }
-  .frame {
-    width: 250px;
-    height: 250px;
-    border: 20px solid #E8C300;
-  }
   .about-block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -491,7 +589,7 @@ body {
     min-height: 400px;
     margin: 0 15px;
   }
-  .content {
+  .content-left-img {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -500,8 +598,16 @@ body {
   .content-box {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    min-height: 400px;
-    margin: 0 15px;
+  }
+  .content-rew {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .input {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
   }
 }
 
@@ -518,16 +624,23 @@ body {
 }
 
 @media (max-width: 600px) {
+  .content-img-wrap {
+    width: 330px;
+    height: 330px;
+  }
   .header__title {
     font-size: 60px;
+  }
+  .input {
+    -ms-flex-preferred-size: 98%;
+        flex-basis: 98%;
   }
 }
 
 @media (max-width: 484px) {
-  .frame {
-    width: 200px;
-    height: 200px;
-    border: 15px solid #E8C300;
+  .content-img-wrap {
+    width: 250px;
+    height: 250px;
   }
   .header__title {
     font-size: 50px;
