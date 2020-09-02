@@ -10,3 +10,13 @@ $(document).ready(function () {
     $('.mobile-nav').toggleClass('mobile-nav-active');
   });
 });
+
+var mySwiper = new Swiper('.swiper-container', {
+  effect: 'fade',
+  pagination: {
+    el: '.projects-pagination',
+    bulletClass: 'projects-bullet',
+    bulletActiveClass: 'projects-bullet-active',
+    clickable: true
+  },
+});
