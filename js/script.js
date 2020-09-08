@@ -12,7 +12,6 @@ $(document).ready(function () {
 });
 
 var mySwiper = new Swiper('.swiper-container', {
-  effect: 'fade',
   pagination: {
     el: '.projects-pagination',
     bulletClass: 'projects-bullet',
@@ -20,3 +19,5 @@ var mySwiper = new Swiper('.swiper-container', {
     clickable: true
   },
 });
+
+/* effect: 'fade', */
