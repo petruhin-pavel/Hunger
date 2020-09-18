@@ -468,6 +468,75 @@ small {
   color: rgba(51, 51, 51, 0.5);
 }
 
+.private {
+  background: url(../img/private-bg.png) top/cover;
+  padding: 0;
+}
+
+.private__dark {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.photo {
+  padding: 0;
+}
+
+.photo-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.photo-image {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  width: 25%;
+}
+
+.contact-name, .contact-email, .contact-phone {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+.contact-message {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 120px;
+}
+
+.contact-button {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+.contact-position {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  background: url(../img/contact.png) center left no-repeat;
+  height: 60px;
+  margin: 5px;
+}
+
+.map {
+  padding: 0;
+}
+
+.footer {
+  height: 100px;
+  background: rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+
+.copyright {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  padding-top: 40px;
+}
+
 .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -645,7 +714,7 @@ small {
           align-items: center;
   list-style: none;
   margin: 50px auto;
-  padding: 15px 0;
+  padding: 0;
   font-size: 12px;
   line-height: 18px;
   color: #000000;
@@ -654,6 +723,11 @@ small {
 
 .tabs__caption li {
   cursor: pointer;
+  padding: 20px 4%;
+}
+
+.tabs__caption li:not(:last-child) {
+  border-right: 2px solid rgba(51, 51, 51, 0.2);
 }
 
 @media (max-width: 1070px) {
@@ -710,6 +784,11 @@ small {
         -ms-flex-align: center;
             align-items: center;
   }
+  .photo-image {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    width: 50%;
+  }
   .burger-nav {
     display: block;
   }
@@ -746,6 +825,36 @@ small {
   .price-item {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+  .photo-image {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    width: 100%;
+  }
+  .tabs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .tabs__caption {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .tabs__caption li {
+    cursor: pointer;
+    padding: 30% 10px;
+  }
+  .tabs__caption li:not(:last-child) {
+    border-right: none;
+    border-bottom: 2px solid rgba(51, 51, 51, 0.2);
   }
 }
 
