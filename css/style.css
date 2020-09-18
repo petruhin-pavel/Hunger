@@ -163,7 +163,7 @@ small {
 }
 
 .header {
-  background: url(./img/header-bg.png) top/cover no-repeat;
+  background: url(../img/header-bg.png) top/cover no-repeat;
   text-align: center;
   padding-bottom: 83px;
 }
