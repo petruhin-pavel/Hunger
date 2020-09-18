@@ -21,3 +21,19 @@ var mySwiper = new Swiper('.swiper-container', {
 });
 
 /* effect: 'fade', */
+
+(function ($) {
+  $(function () {
+    $("ul.tabs__caption").on("click", "li:not(.active)", function () {
+      $(this)
+        .addClass("price-active")
+        .siblings()
+        .removeClass("price-active")
+        .closest("div.tabs")
+        .find("div.price-wrap")
+        .removeClass("price-active")
+        .eq($(this).index())
+        .addClass("price-active");
+    });
+  });
+})(jQuery);

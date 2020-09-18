@@ -418,24 +418,32 @@ small{
 // price====
 .price{
   &-wrap{
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
   }
+  &-active{
+    display: flex;
+  }
   &-item{
     flex-basis: 33.33%;
-    
-    
+    margin-bottom: 30px;
   }
   &-item-wrap{
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   &-item-title{
     font-family: 'Italiana', serif;
     text-transform: uppercase;
     font-size: 18px;
     line-height: 18px;
+  }
+  &-item-text{
+    min-width: 302px;
   }
   &__title{
     text-align: center;
@@ -460,6 +468,9 @@ small{
     line-height: 18px;
     color: #000000;
     max-width: 840px;
+    li{
+      cursor: pointer;
+    }
   }
 }
 // ===========================
